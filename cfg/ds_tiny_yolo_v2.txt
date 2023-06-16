@@ -1,0 +1,18 @@
+[property]
+gpu-id=0
+#0=RGB, 1=BGR
+model-color-format=0
+onnx-file=../../models/tinyYolov2/tinyyolov2-8.onnx
+#custom-network-config=yolov2.cfg
+#model-file=yolov2.weights
+model-engine-file=../../models/tinyYolov2/tinyyolov2-8.onnx_b1_gpu0_fp16.engine
+labelfile-path=labels.txt
+## 0=FP32, 1=INT8, 2=FP16 mode
+network-mode=2
+num-detected-classes=20
+gie-unique-id=1
+is-classifier=0
+maintain-aspect-ratio=1
+output-blob-names=grid
+parse-bbox-func-name=NvDsInferParseCustomYoloV2Tiny
+custom-lib-path=../lib/libnvdsinfer_custom_bbox_tiny_yolo.so
